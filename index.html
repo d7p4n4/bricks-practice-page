@@ -1,0 +1,838 @@
+<!doctype html> 
+<html lang="en">
+  <head>
+    <!-- Required meta tags --> 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <!-- Bootstrap CSS --> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <!-- font fam -->
+    <link href="https://fonts.googleapis.com/css?family=Gudea|Karma|Roboto" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>    
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <title>Practice page</title> 
+    
+    <link href="reset.css" type="text/css" rel="stylesheet">
+        
+    <!-- main styles -->
+
+    <style>
+      
+      html {
+        font-size: 11.5px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
+      
+      @media (min-width: 576px) {
+        html {
+          font-size: 13px;
+        }
+      }
+      
+      @media (min-width: 768px) {
+        html {
+          font-size: 17px;
+        }
+      }
+      
+      @media (min-width: 992px) {
+        html {
+          font-size: 19.5px;
+        }
+      }
+      
+      @media (min-width: 1200px) {
+        html {
+          font-size: 22px;
+        }
+      }
+      
+      @media (min-width: 1440px) {
+        html {
+          font-size: 25px;
+        }
+      }
+    
+     a {
+        text-decoration: none;
+        color: inherit;
+      }
+      
+      a:hover {
+        text-decoration: none;
+        color: inherit;
+      }
+      
+      header {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        background-image: url(assets/wallpaper.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+      }
+      
+      .inform-row {
+        border-bottom: .1rem solid rgba(255,255,255,.3);
+      }
+      
+      .inform-phone,
+      .inform-email,
+      .icons {
+        color: whitesmoke;
+        font-size: .65rem;
+        font-family: gudea;
+        text-align: right;
+        padding: .75rem 1rem;
+        transform-origin: center center;
+        transition: all .5s ease-in-out;
+      }
+      
+      @media (max-width: 768px) {
+        .inform-phone,
+        .inform-email,
+        .icons,
+        .buy-line {
+          font-size: .85rem;
+        }
+      }
+      
+      .inform-wrap {
+        background-color: transparent;
+        transition: all .5s ease-in-out;
+        border-right: .1rem solid rgba(255,255,255,.3);
+      }
+      
+      .inform-wrap:hover {
+        background-color: rgba(255,255,255,.3);
+        border-color: transparent;
+        cursor: pointer;
+      }
+      
+      .inform-wrap:hover .inform-phone,
+      .inform-wrap:hover .inform-email {
+        color: rgb(163,242,243);
+        font-weight: bold;
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+      
+      .inform-wrap:hover .inform-phone {
+        padding-right: 1.9rem;
+      }
+      
+      .inform-email {
+        text-align: center;
+      }
+      
+      .icons {
+        text-align: left;
+        font-size: 1rem;
+        padding-bottom: 0;
+        padding-top: 0.65rem;
+        border-right: none;
+      }
+      
+      .fa-facebook-square,
+      .fa-twitter,
+      .fa-instagram,
+      .fa-google-plus-square,
+      .fa-google-play {
+        padding-right: .25rem;
+        padding-top: 0;
+        transition: all .5s ease-in-out;
+        transform-origin: center center;
+      }
+
+      .fa-facebook-square:hover,
+      .fa-twitter:hover,
+      .fa-instagram:hover,
+      .fa-google-plus-square:hover,
+      .fa-google-play:hover {
+        color: rgb(163,242,243);
+        transform: scale(1.2);
+      }
+      
+      .fa-phone {
+        transform: scaleX(-1);
+      }
+      
+      @media (max-width: 768px) {
+        .col-space {
+          display: none;
+        }
+      }
+      
+      .name {
+        font-family: gudea;
+        font-size: 1.5rem;
+        text-align: center;
+        color: whitesmoke;
+        font-weight: 900;
+      }
+      
+      .nav-text {
+        text-align: center;
+        font-family: gudea;
+        font-size: .85rem;
+        color: whitesmoke;
+        padding: .3rem;
+        transition: all .5s ease-in-out;
+      }
+      
+      @media (max-width: 768px) {
+        .nav-text {
+          padding: .5rem;
+          font-size: 1rem;
+        }
+        
+        .name {
+          padding-bottom: .5rem;
+          font-size: 1.75rem;
+        }
+      }
+      
+      .svg-wrap svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      
+      .top,
+      .left,
+      .bottom,
+      .right {
+        stroke: rgba(133,133,133,1);
+        stroke-width: .2rem;
+        fill: none;
+        transition: all .5s ease-in-out;
+      }
+      
+      .top {
+        transform: translateX(100%);
+      }
+      
+      .left {
+        transform: translateY(-100%);
+      }
+      
+      .bottom {
+        transform: translateX(-100%);
+      }
+      
+      .right {
+        transform: translateY(100%);
+      }
+      
+      .svg-wrap:hover .top,
+      .svg-wrap:hover .bottom {
+        transform: translateX(0);
+      }
+      
+      .svg-wrap:hover .left,
+      .svg-wrap:hover .right {
+        transform: translateY(0);
+      }
+      
+      .svg-wrap:hover .nav-text {
+        color: rgb(163,242,243);
+        font-weight: bold;
+        cursor: pointer;
+      }
+      
+      .buy-line {
+        color: whitesmoke;
+        text-align: center;
+        font-size: .65rem;
+        font-family: gudea;
+      }
+      
+      @media (max-width: 768px) {
+        .buy-line {
+          font-size: .85rem;
+        }
+      }
+      
+      .main-title {
+        color: whitesmoke;
+        font-size: 2.5rem;
+        font-family: roboto;
+        text-align: center;
+        font-weight: 100;
+      }
+      
+      .main-text {
+        color: whitesmoke;
+        font-size: .85rem;
+        text-align: center;
+        font-family: karma;
+        font-style: italic;
+      }
+      
+      .main-info-full-wrap {
+        position: relative;
+        top: 20%;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        overflow: hidden;
+      }
+      
+      .main-info-long-wrap {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: auto;
+        padding: 0; 
+        width: 305%;
+        background-color: grey;
+        transition: all .8s ease-in-out;
+      }
+      
+      .main-info-text-wrap {
+        position: relative;
+        top: 0;
+        left: 0;
+        padding: 1rem 0;
+        width: calc(100vw - 17px);
+        margin: 0;
+        display: inline-block;
+        float: left;
+      }
+      
+      .yellow-btn {
+        text-align: center;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 7.5rem;
+        height: 2.25rem;
+        border-radius: 99999px;
+        background-color: rgb(255,165,0);
+        color: whitesmoke;
+        font-size: .85rem;
+        font-family: gudena;
+        margin-top: 1rem;
+        padding-top: .5rem;
+        border: .15rem solid rgb(255,165,0);
+        transition: background .5s ease-in-out;
+      }
+      
+      .yellow-btn:hover {
+        box-shadow: inset 0 0 10px rgba(0,0,0,.3);
+        background-color: transparent;
+        cursor: pointer;
+      }
+      
+      .row {
+        margin-right: 0px;
+        margin-left: 0px;
+      }
+      
+      @media (min-width: 768px) {
+        .buy-row {
+          position: absolute;
+          right: 0;
+          left: inherit;
+        }
+      }
+      
+      .btn-left,
+      .btn-right {
+        background-color: transparent;
+        color: rgba(255,255,255,.5);
+        text-align: center;
+        font-size: 2.5rem;
+        border: none;
+        transform-origin: center center;
+        transition: all .3s ease-in-out;
+      }
+      
+      .btn-right {
+        color: whitesmoke;
+      }
+
+      .btn-left:hover,
+      .btn-right:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+      }
+      
+      .btn-row {
+        position: relative;
+        top: 35%;
+        z-index: 10;
+      }
+      
+      /* wrapper-1 */
+      
+      .wrapper-1 {
+        background-color: white;
+        width: 100%;
+        height: auto;
+        padding: 5rem 2rem;
+      }
+      
+      .portfolio-little-title {
+        text-align: center;
+        color: rgba(0,0,0,.5);
+        font-family: karma;
+        font-style: italic;
+        font-size: 1rem;
+      }
+      
+      .portfolio-title {
+        text-align: center;
+        font-family: roboto;
+        color: rgba(0,0,0,.75);
+        font-size: 2.5rem;
+      }
+      
+      .portfolio-text {
+        font-size: 1rem;
+        font-family: gudea;
+        color: rgba(0,0,0,.5);
+        text-align: center;
+        line-height: 1.2rem;
+      }
+      
+      .line {
+        background-color: rgba(0,0,0,.2);
+        width: 30%;
+        height: .1rem;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        left: 35%;
+      }
+      
+      .portfolio-img {
+        border-radius: 50%;
+      }
+      
+      .portfolio-img-title {
+        text-align: center;
+        font-family: roboto;
+        color: rgba(0,0,0,.75);
+        font-size: 1.25rem;
+      }
+      
+      .portfolio-img-text {
+        text-align: center;
+        color: rgba(0,0,0,.5);
+        font-family: gudea;
+        font-size: 1rem;
+      }
+      
+      /* wrapper-2 */
+      
+      .wrapper-2 {
+        width: 100%;
+        height: auto;
+        padding: 5rem 2rem 4rem 2rem;
+        background-image: url(assets/garden-wallpaper.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      
+      .wrapper-2 .icons {
+        color: yellow;
+        font-size: 1.25rem;
+        text-align: center;
+      }
+      
+      .garden-title {
+        color: whitesmoke;
+        text-align: center;
+        font-size: 1.25rem;
+        font-family: roboto;
+        letter-spacing: .1rem;
+      }
+      
+      .garden-text {
+        color: whitesmoke;
+        font-size: 1rem;
+        font-family: karma;
+        font-style: italic;
+        text-align: center;
+      }
+      
+      .garden-border,
+      .garden-border-2,
+      .garden-border-3,
+      .garden-border-4,
+      .garden-border-5,
+      .garden-border-6 {
+        border-bottom: .1rem solid rgba(133,133,133,.5);
+      }
+      
+      @media (min-width: 576px) {
+        .garden-border,
+        .garden-border-3,
+        .garden-border-5 {
+          border-right: .1rem solid rgba(133,133,133,.5);
+        }
+        
+        .garden-border-5, 
+        .garden-border-6 {
+          border-bottom: none;
+        }
+      }
+      
+      @media (min-width: 768px) {
+        .garden-border-2,
+        .garden-border-4,
+        .garden-border-5 {
+          border-right: .1rem solid rgba(133,133,133,.5);
+        }
+        
+        .garden-border-3 {
+          border-right: none;
+        }
+        
+        .garden-border-4 {
+          border-bottom: none;
+        }
+      }
+      
+      /* wrapper-3 */
+      
+      .wrapper-3 {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin: 0;
+      }
+      
+      @media (max-width: 768px) {
+        .worker-big-img {
+          display: none;
+        }
+      }
+    </style>
+    
+  </head>
+  
+  <header>
+  
+    <div class="row inform-row">
+      <div class="col-4 col-md-2 p-0 inform-wrap">
+        <p class="inform-phone"><i class="fas fa-phone"></i> +1 (800) 416 37</p>
+      </div>
+      <div class="col-4 col-md-2 p-0 inform-wrap">
+        <p class="inform-email"><i class="fas fa-envelope"></i> info@bricks.com</p>
+      </div>
+      <div class="col-0 col-md-6 col-space"></div>
+      <div class="col-4 col-md-2 p-0 inform-wrap" style="border-left: .1rem solid rgba(255,255,255,.3);">
+        <p class="icons"><i class="fab fa-facebook-square"></i> <i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i> <i class="fab fa-google-plus-square"></i> <i class="fab fa-google-play"></i></p>
+      </div>
+    </div>
+    
+    <div class="row m-3 mt-4">
+      <div class="col-4 col-md-2">
+        <h3 class="name">BRICKS<span style="color: yellow">.</span></h3>
+      </div>
+      <div class="col-8 col-md-4 my-auto buy-row pt-md-1">
+        <div class="row justify-content-end pr-3">
+          <div class="col-5 col-md-4 p-0">
+            <p class="buy-line"><i class="fas fa-shopping-cart"></i> $0.00 (0 items)</p>
+          </div>
+          <div class="col-3 col-md-2 p-0">
+            <p class="buy-line"><i class="fas fa-globe"></i> EUR</p>
+          </div>
+          <div class="col-1 p-0">
+            <p class="buy-line"><i class="fas fa-search"></i></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 mt-2 mt-md-0 p-0 nav-row">
+        <div class="row justify-content-center">
+          <div class="col-3 col-sm-2 p-0 align-self-center svg-wrap">
+            <p class="nav-text">HOME</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+              <line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+              <line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+              <line class="right" x1="100%" x2="100%" y1="0" y2="100%"></line>
+            </svg>
+          </div>
+          <div class="col-3 col-sm-2 p-0 align-self-center svg-wrap">
+            <p class="nav-text">PAGES</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+              <line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+              <line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+              <line class="right" x1="100%" x2="100%" y1="0" y2="100%"></line>
+            </svg>
+          </div>
+          <div class="col-3 col-sm-2 p-0 align-self-center svg-wrap">
+            <p class="nav-text">PORTFOLIO</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+              <line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+              <line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+              <line class="right" x1="100%" x2="100%" y1="0" y2="100%"></line>
+            </svg>
+          </div>
+          <div class="col-3 col-sm-2 p-0 align-self-center svg-wrap">
+            <p class="nav-text">JOURNAL</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+              <line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+              <line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+              <line class="right" x1="100%" x2="100%" y1="0" y2="100%"></line>
+            </svg>
+          </div>
+          <div class="col-3 col-sm-1 p-0 align-self-center svg-wrap">
+            <p class="nav-text">SHOP</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+              <line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+              <line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+              <line class="right" x1="100%" x2="100%" y1="0" y2="100%"></line>
+            </svg>
+          </div>
+          <div class="col-3 col-sm-2 p-0 align-self-center svg-wrap">
+            <p class="nav-text">CONTACT</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+              <line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+              <line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+              <line class="right" x1="100%" x2="100%" y1="0" y2="100%"></line>
+            </svg>
+          </div>
+          <div class="col-3 col-sm-1 p-0 align-self-center svg-wrap">
+            <p class="nav-text">BUY</p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
+              <line class="left" x1="0" x2="0" y1="0" y2="100%"></line>
+              <line class="bottom" x1="0" x2="100%" y1="100%" y2="100%"></line>
+              <line class="right" x1="100%" x2="100%" y1="0" y2="100%"></line>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+ 
+      <div class="row justify-content-between btn-row">
+        <div class="col-1 col-md-2 p-0">
+          <p class="btn-left">
+            <i class="fas fa-chevron-left"></i>
+          </p>
+        </div>
+        <div class="col-1 col-md-2 p-0">
+          <p class="btn-right">
+            <i class="fas fa-chevron-right"></i>
+          </p>
+        </div>
+      </div>
+    
+    <div class="main-info-full-wrap">
+      <div class="main-info-long-wrap">
+        <div class="main-info-text-wrap">
+          <div class="row justify-content-center main-info-row p-0 m-0">
+            <div class="col-11 p-0">
+              <div class="row justify-content-center">
+                <div class="col-12 p-0 m-0 pb-4">
+                  <h1 class="main-title">BUILD YOUR OWN WORLD</h1>
+                </div>
+                <div class="col-10 col-md-6">
+                  <h3 class="main-text">Ne nec option percipitur disputando, ferri mazim mea cu, an wisi accusamus vis. In vero referrentur eos. At sit omnesque maiestatis, vim aperiri maluisset ad, harum facilisi et has.</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="yellow-btn">VIEW MORE</div>
+        </div>
+        <div class="main-info-text-wrap">
+          <div class="row justify-content-center main-info-row">
+            <div class="col-10">
+              <div class="row justify-content-center">
+                <div class="col-12 pb-4">
+                  <h1 class="main-title">CREATE SOMETHING NEW</h1>
+                </div>
+                <div class="col-10 col-md-6 ">
+                  <h3 class="main-text">Ne nec option percipitur disputando, ferri mazim mea cu, an wisi accusamus vis. In vero referrentur eos. At sit omnesque maiestatis, vim aperiri maluisset ad, harum facilisi et has. Ferri mazim mea cu, an wisi accusamus vis. In vero referrentur eos.</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="yellow-btn">VIEW MORE</div>
+        </div>
+        <div class="main-info-text-wrap">
+          <div class="row justify-content-center main-info-row">
+            <div class="col-10">
+              <div class="row justify-content-center">
+                <div class="col-12 pb-4">
+                  <h1 class="main-title">MAKE YOUR FUTURE</h1>
+                </div>
+                <div class="col-10 col-md-6 ">
+                  <h3 class="main-text">Ne nec option percipitur disputando, ferri mazim mea cu, an wisi accusamus vis. In vero referrentur eos. In vero referrentur eos.</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="yellow-btn">VIEW MORE</div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  
+  <div class="wrapper-1">
+  
+    <div class="row justify-content-center">
+      <div class="col-12 pb-3">
+        <h3 class="portfolio-little-title">Our Portfolio</h3>
+      </div>
+      <div class="col-12">
+        <h1 class="portfolio-title pb-4">LATEST PROJECTS</h1>
+        <div class="line"></div>
+      </div>
+      <div class="col-11 col-md-6 pt-4">
+        <p class="portfolio-text">Aeterno accusata theophrastus eum ei, sed ne ridens ancillae. Vim ne diam iusto, utinam atomorum abhorreant ei vel. Esse scripta ne his, homero essent inimicus pri et. Ad usu elitr euismod. Usu no omnes ornatus erroribus, ei vim enim solet, viderer accumsan adversarium usu cu. Praesent moderatius theophrastus an vix.</p>
+      </div>
+    </div>
+    
+    <div class="row justify-content-center mt-5">
+      <div class="col-9 col-sm-6 col-md-3 p-0 m-0">
+        <img class="img-fluid portfolio-img p-5 p-md-3" alt="" src="assets/portfolio-1.jpg"/>
+        <h6 class="portfolio-img-title pb-3">I'M COMING HOME</h6>
+        <p class="portfolio-img-text">Aeterno Accusata</p>
+      </div>
+      <div class="col-9 col-sm-6 col-md-3 p-0 m-0 mt-1 mt-sm-0">
+        <img class="img-fluid portfolio-img p-5 p-md-3" alt="" src="assets/portfolio-2.jpg"/>
+        <h6 class="portfolio-img-title pb-3">CREATIVE BATHROOM</h6>
+        <p class="portfolio-img-text">Usu Omens</p>
+      </div>
+      <div class="col-9 col-sm-6 col-md-3 p-0 m-0 mt-1 mt-sm-0">
+        <img class="img-fluid portfolio-img p-5 p-md-3" alt="" src="assets/portfolio-3.jpg"/>
+        <h6 class="portfolio-img-title pb-3">PROJECT DISCUSSION</h6>
+        <p class="portfolio-img-text">Praesent Usu Vix</p>
+      </div>
+      <div class="col-9 col-sm-6 col-md-3 p-0 m-0 mt-1 mt-sm-0">
+        <img class="img-fluid portfolio-img p-5 p-md-3" alt="" src="assets/portfolio-4.jpg"/>
+        <h6 class="portfolio-img-title pb-3">UMEA UNIVERSITY</h6>
+        <p class="portfolio-img-text">Moderatius</p>
+      </div>
+    </div>
+  
+  </div>
+  
+  <div class="wrapper-2">
+  
+    <div class="row justify-content-center">
+      <div class="col-10 col-sm-6 col-md-4 pl-4 pr-4 pb-3 garden-border">
+        <p class="icons pb-3"><i class="far fa-sun"></i></p>
+        <h6 class="garden-title pb-3">QUALITY</h6>
+        <p class="garden-text">Aeterno accusata theophrastus eum ei, sed ne ridens ancillae. Vim ne diam iusto, utinam atomorum abhorreant ei vel. Esse scripta ne his, homero essent inimicus pri et. Ad usu elitr euismod.</p>
+      </div>
+      <div class="col-10 col-sm-6 col-md-4 pl-4 pr-4 pb-3 garden-border-2">
+        <p class="icons pb-3"><i class="far fa-lightbulb"></i></p>
+        <h6 class="garden-title pb-3">INNOVATION</h6>
+        <p class="garden-text">Aeterno accusata theophrastus eum ei, sed ne ridens ancillae. Esse scripta ne his, homero essent inimicus pri et. Ad usu elitr euismod.</p>
+      </div>
+      <div class="col-10 col-sm-6 col-md-4 pl-4 pr-4 pb-3 garden-border-3">
+        <p class="icons pb-3"><i class="fas fa-lock"></i></p>
+        <h6 class="garden-title pb-3">SAFETY</h6>
+        <p class="garden-text">Aeterno accusata theophrastus eum ei, sed ne ridens ancillae. Vim ne diam iusto, utinam atomorum abhorreant ei vel. Esse scripta ne his, homero essent inimicus pri et. Ad usu elitr euismod.</p>
+      </div>
+      <div class="col-10 col-sm-6 col-md-4 pl-4 pr-4 pb-3 pt-md-3 garden-border-4">
+        <p class="icons pb-3"><i class="far fa-thumbs-up"></i></p>
+        <h6 class="garden-title pb-3">SUSTANABILITY</h6>
+        <p class="garden-text">Aeterno accusata theophrastus eum ei, sed ne ridens ancillae. Esse scripta ne his, homero essent inimicus pri et. Ad usu elitr euismod.</p>
+      </div>
+      <div class="col-10 col-sm-6 col-md-4 pl-4 pr-4 pb-3 pt-md-3 garden-border-5">
+        <p class="icons pb-3"><i class="fas fa-briefcase"></i></p>
+        <h6 class="garden-title pb-3">PARTNERS</h6>
+        <p class="garden-text">Aeterno accusata theophrastus eum ei, sed ne ridens ancillae. Esse scripta ne his, homero essent inimicus pri et. Ad usu elitr euismod.</p>
+      </div>
+      <div class="col-10 col-sm-6 col-md-4 pl-4 pr-4 pb-3 pt-md-3 garden-border-6">
+        <p class="icons pb-3"><i class="far fa-user"></i></p>
+        <h6 class="garden-title pb-3">STAFF</h6>
+        <p class="garden-text">Aeterno accusata theophrastus eum ei, sed ne ridens ancillae. Vim ne diam iusto, utinam atomorum abhorreant ei vel. Esse scripta ne his, homero essent inimicus pri et. Ad usu elitr euismod.</p>
+      </div>
+    </div>
+  
+  </div>
+  
+  <div class="wrapper-3">
+    <div class="row p-0 m-0">
+      <div class="col-12 col-md-6 p-0 worker-big-img">
+        <img class="img-fluid p-0 m-0" src="assets/worker1.jpg" alt="">
+      </div>
+      <div class="col-12 col-md-6 my-auto pt-5 pb-5 pt-md-0 pb-md-0">
+        <div class="row justify-content-center">
+          <div class="col-12 pb-3 pr-0 pl-0">
+            <h3 class="portfolio-little-title">What Makes Us Different</h3>
+          </div>
+          <div class="col-12">
+            <h1 class="portfolio-title pb-4">WHAT MAKES US DIFFERENT</h1>
+            <div class="line"></div>
+          </div>
+          <div class="col-11 col-md-11 pt-4">
+            <p class="portfolio-text">Aeterno accusata theophrastus eum ei, sed ne ridens ancillae. Vim ne diam iusto, utinam atomorum abhorreant ei vel. Esse scripta ne his, homero essent inimicus pri et.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+          <div class="col-3 p-0">
+            <img class="img-fluid" src="assets/worker2.jpg" alt=""/>
+          </div>
+          <div class="col-1"></div>
+          <div class="col-3 p-0">
+            <img class="img-fluid" src="assets/worker3.jpg" alt=""/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    window.onload = function() {
+      
+      var $n = 1;
+      
+      $(".btn-right").on("click", function() {
+        if($n == 1) {
+          $(".main-info-long-wrap").css({"margin-left": "-100%"});
+          $n++;
+          $(".btn-left").css({"color": "whitesmoke"});
+        } else {
+          $(".main-info-long-wrap").css({"margin-left": "-200%"});
+          $(".btn-right").css({"color": "rgba(255,255,255,.5)"});
+        }
+      });
+      
+      $(".btn-left").on("click", function() {
+        if($n == 2) {
+          $(".main-info-long-wrap").css({"margin-left": "-100%"});
+          $n--;
+          $(".btn-right").css({"color": "whitesmoke"});
+        } else {
+          $(".main-info-long-wrap").css({"margin-left": "0"});
+          $(".btn-left").css({"color": "rgba(255,255,255,.5)"});
+        }
+      })
+      
+    }
+  </script>
+  
+ <!-- Optional JavaScript --> 
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+
+  </body> 
+</html>
+      
+      
+      
