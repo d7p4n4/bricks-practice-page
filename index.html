@@ -268,15 +268,22 @@
       
       .main-text {
         color: whitesmoke;
-        font-size: .85rem;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
         text-align: center;
         font-family: karma;
         font-style: italic;
       }
       
+      @media (min-width: 576px) {
+        .main-text {
+          font-size: 1rem;
+        }
+      }
+      
       .main-info-full-wrap {
         position: relative;
-        top: 20%;
+        top: 15%;
         width: 100%;
         height: auto;
         padding: 0;
@@ -317,10 +324,19 @@
         color: whitesmoke;
         font-size: .85rem;
         font-family: gudena;
-        margin-top: 1rem;
-        padding-top: .5rem;
+        margin-top: 1.5rem;
+        padding-top: .6rem;
         border: .15rem solid rgb(255,165,0);
         transition: background .5s ease-in-out;
+      }
+      
+      @media (max-width: 576px) {
+        .yellow-btn {
+          width: 10rem;
+          height: 3rem;
+          padding-top: .9rem;
+          font-size: 1rem;
+        }
       }
       
       .yellow-btn:hover {
@@ -383,7 +399,13 @@
         color: rgba(0,0,0,.5);
         font-family: karma;
         font-style: italic;
-        font-size: 1rem;
+        font-size: 1.2rem;
+      }
+      
+      @media (min-width: 576px) {
+        .portfolio-little-text {
+          font-size: 1rem;
+        }
       }
       
       .portfolio-title {
@@ -394,11 +416,18 @@
       }
       
       .portfolio-text {
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-family: gudea;
         color: rgba(0,0,0,.5);
         text-align: center;
-        line-height: 1.2rem;
+        line-height: 1.4rem;
+      }
+      
+      @media (min-width: 768px) {
+        .portfolio-text {
+          font-size: 1rem;
+          line-height: 1.2rem;
+        }
       }
       
       .line {
@@ -426,7 +455,13 @@
         text-align: center;
         color: rgba(0,0,0,.5);
         font-family: gudea;
-        font-size: 1rem;
+        font-size: 1.2rem;
+      }
+    
+      @media (min-width: 576px) {
+        .portfolio-img-text {
+          font-size: 1rem;
+        }
       }
       
       /* wrapper-2 */
@@ -441,26 +476,90 @@
         background-repeat: no-repeat;
       }
       
-      .wrapper-2 .icons {
+      .wrapper-2 .icons,
+      .wrapper-4 .icons{
         color: yellow;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         text-align: center;
       }
       
       .garden-title {
         color: whitesmoke;
         text-align: center;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
         font-family: roboto;
         letter-spacing: .1rem;
       }
       
       .garden-text {
         color: whitesmoke;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-family: karma;
         font-style: italic;
         text-align: center;
+        line-height: 1.2rem;
+      }
+      
+      @media (min-width: 576px) {
+        .wrapper-2 .icons,
+        .wrapper-4 .icons,
+        .garden-title {
+          font-size: 1.75rem;
+        }
+        
+        .garden-text {
+          font-size: 1.5rem;
+          line-height: 1.7rem;
+        }
+        
+        .wrapper-2 .garden-text {
+          font-size: 1.25rem;
+          line-height: 1.4rem;
+        }
+      }
+      
+      @media (min-width: 768px) {
+        .wrapper-2 .icons,
+        .wrapper-4 .icons {
+          font-size: 1.25;
+        }
+        
+        .garden-title {
+          font-size: 1rem;
+        }
+        
+        .garden-text {
+          font-size: .85rem;
+          line-height: 1rem;
+        }
+        
+        .wrapper-4 .garden-text {
+          font-size: 1.5rem;
+          line-height: 1.7rem;
+        }
+        
+        .wrapper-4 .garden-title {
+          font-size: 1.8rem;
+        }
+        
+        .wrapper-4 .icons {
+          font-size: 1.8rem;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .wrapper-4 .garden-text {
+          font-size: .85rem;
+          line-height: 1rem;
+        }
+        
+        .wrapper-4 .garden-title {
+          font-size: 1rem;
+        }
+        
+        .wrapper-4 .icons {
+          font-size: 1.25rem;
+        }        
       }
       
       .garden-border,
@@ -510,9 +609,187 @@
         margin: 0;
       }
       
-      @media (max-width: 768px) {
+      @media (max-width: 992px) {
         .worker-big-img {
           display: none;
+        }
+      }
+      
+      /* wrapper-4 */
+      
+      .wrapper-4 {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .background,
+      .background-2,
+      .background-3 {
+        background-image: url(assets/background1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+        width: 100%;
+        padding-top: 100%;
+      }
+      
+      .background-2 {
+        background-image: url(assets/background3.jpg);
+      }
+      
+      .background-3 {
+        background-image: url(assets/background-2.jpg);
+      }
+      
+      .background-text {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+      
+      /* wrapper-5 */
+      
+      .wrapper-5 {
+        width: 100%;
+        padding: 3rem 1rem 4rem 1rem;
+      }
+      
+      .wrapper-5 .yellow-btn {
+        color: white;
+        transition: all .5s ease-in-out;
+      }
+      
+      .wrapper-5 .yellow-btn:hover {
+        color: rgba(0,0,0,.5);
+      }
+      
+      footer {
+        background-color: rgb(42,47,53);
+        width: 100%;
+        padding: 4rem 2rem 0 2rem;
+      }
+      
+      .footer-title {
+        color: rgb(126,131,137);
+        font-size: 1.5rem;
+        font-family: roboto;
+      }
+      
+      .contact-little-title {
+        color: rgb(157,162,168);
+        font-weight: bold;
+        font-family: gudea;
+        font-size: 1.25rem;
+      }
+      
+      .contact-text {
+        font-family: gudea;
+        color: rgb(126,131,137);
+        font-size: 1.25rem;
+      }
+      
+      .contact-border {
+        border-bottom: .05rem solid rgba(126,131,137,.5);
+      }
+      
+      .footer-line {
+        line-height: 1.4rem;
+      }
+      
+      @media (min-width: 576px) {
+        .footer-title {
+          font-size: 1.2rem;
+        }
+        
+        .contact-little-title {
+          font-size: 1rem;
+        }
+        
+        .contact-text {
+          font-size: 1rem;
+        }
+        
+        .footer-line {
+          line-height: 1.2rem;
+        }
+      }
+      
+      .email {
+        width: 100%;
+        background-color: rgb(126,131,137);
+        text-align: center;
+        height: 3rem;
+        border-radius: 99999px;
+        color: whitesmoke;
+        font-family: gudea;
+        font-size: 1.25rem;
+        border: none;
+      }
+      
+      input::placeholder {
+        font-family: gudea;
+        font-size: 1.25rem;
+        color: whitesmoke;
+      }
+      
+      .subscribe-btn {
+        width: 100%;
+        height: 3rem;
+        font-family: gudea;
+        font-size: 1.25rem;
+        text-align: center;
+        color: rgb(126,131,137);
+        background-color: transparent;
+        border: .2rem solid rgb(126,131,137);
+        border-radius: 99999px;
+        margin-top: 1rem;
+        padding-top: .7rem;
+        font-weight: bold;
+        transition: all .5s ease-in-out;
+      }
+      
+      .subscribe-btn:hover {
+        background-color: rgb(126,131,137);
+        color: whitesmoke;
+        border: .2rem solid rgb();
+        cursor: pointer;
+      }
+      
+      @media (min-width: 992px) {
+        .footer-title {
+          font-size: 1rem;
+        }
+        
+        .contact-little-title {
+          font-size: .85rem;
+        }
+        
+        .contact-text {
+          font-size: .85rem;
+        }
+        
+        .footer-line {
+          line-height: 1rem;
+        }
+        
+        .email {
+          height: 2rem;
+          font-size: 1rem;
+        }
+        
+        input::placeholder {
+          font-size: 1rem;
+        }
+        
+        .subscribe-btn {
+          height: 2rem;
+          font-size: 1rem;
+          padding-top: .35rem;
+          border-width: .1rem;
         }
       }
     </style>
@@ -529,18 +806,18 @@
         <p class="inform-email"><i class="fas fa-envelope"></i> info@bricks.com</p>
       </div>
       <div class="col-0 col-md-6 col-space"></div>
-      <div class="col-4 col-md-2 p-0 inform-wrap" style="border-left: .1rem solid rgba(255,255,255,.3);">
+      <div class="col-4 col-md-2 p-0 m-0 inform-wrap" style="border-left: .1rem solid rgba(255,255,255,.3);">
         <p class="icons"><i class="fab fa-facebook-square"></i> <i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i> <i class="fab fa-google-plus-square"></i> <i class="fab fa-google-play"></i></p>
       </div>
     </div>
     
     <div class="row m-3 mt-4">
-      <div class="col-4 col-md-2">
+      <div class="col-4 col-md-4 col-lg-2">
         <h3 class="name">BRICKS<span style="color: yellow">.</span></h3>
       </div>
       <div class="col-8 col-md-4 my-auto buy-row pt-md-1">
         <div class="row justify-content-end pr-3">
-          <div class="col-5 col-md-4 p-0">
+          <div class="col-5 col-lg-4 p-0">
             <p class="buy-line"><i class="fas fa-shopping-cart"></i> $0.00 (0 items)</p>
           </div>
           <div class="col-3 col-md-2 p-0">
@@ -551,7 +828,7 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-6 mt-2 mt-md-0 p-0 nav-row">
+      <div class="col-12 col-md-12 col-lg-6 mt-2 mt-lg-0 p-0 nav-row">
         <div class="row justify-content-center">
           <div class="col-3 col-sm-2 p-0 align-self-center svg-wrap">
             <p class="nav-text">HOME</p>
@@ -589,7 +866,7 @@
               <line class="right" x1="100%" x2="100%" y1="0" y2="100%"></line>
             </svg>
           </div>
-          <div class="col-3 col-sm-1 p-0 align-self-center svg-wrap">
+          <div class="col-3 col-sm-1 p-0 mt-2 mt-sm-0 align-self-center svg-wrap">
             <p class="nav-text">SHOP</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
               <line class="top" x1="0" x2="100%" y1="0" y2="0"></line>
@@ -765,10 +1042,10 @@
   
   <div class="wrapper-3">
     <div class="row p-0 m-0">
-      <div class="col-12 col-md-6 p-0 worker-big-img">
+      <div class="col-12 col-lg-6 p-0 worker-big-img">
         <img class="img-fluid p-0 m-0" src="assets/worker1.jpg" alt="">
       </div>
-      <div class="col-12 col-md-6 my-auto pt-5 pb-5 pt-md-0 pb-md-0">
+      <div class="col-12 col-lg-6 my-auto pt-5 pb-5 pt-lg-0 pb-lg-0">
         <div class="row justify-content-center">
           <div class="col-12 pb-3 pr-0 pl-0">
             <h3 class="portfolio-little-title">What Makes Us Different</h3>
@@ -793,6 +1070,190 @@
       </div>
     </div>
   </div>
+  
+  <div class="wrapper-4">
+  
+    <div class="row justify-content-center" style="margin-top: -13px;">
+      <div class="col-12 col-lg-4 p-0 m-0">
+        <div class="background">
+          <div class="row justify-content-center background-text">
+            <div class="col-11">
+              <p class="icons pb-4"><i class="far fa-building"></i></p>
+              <h6 class="garden-title pl-3 pr-3 pb-4">BUILDDING SKYSCRAPERS IS LIKE BUILDING RELATIONSHIPS.</h6>
+              <p class="garden-text pr-3 pl-3">Aeterno accusata theophrastus eum ei, sed ne ridens ancillae. Vim ne diam iusto, utinam atomorum abhorreant ei vel. Esse scripta ne his, homero essent inimicus pri et. Ad usu elitr euismod.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 p-0 m-0">
+        <div class="background-2">
+          <div class="row justify-content-center background-text">
+            <div class="col-11">
+              <p class="icons pb-4"><i class="fas fa-briefcase"></i></p>
+              <h6 class="garden-title pl-3 pr-3 pb-4">STEADY CONSTRUCTION REQUIRES SOLID AND ROBUST FOUNDATION.</h6>
+              <p class="garden-text pr-3 pl-3">Aeterno accusata theophrastus eum ei, sed ne ridens ancillae. Vim ne diam iusto, utinam atomorum abhorreant ei vel. Esse scripta ne his, homero essent inimicus pri et. Ad usu elitr euismod.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 p-0 m-0">
+        <div class="background-3">
+          <div class="row justify-content-center background-text">
+            <div class="col-11">
+              <p class="icons pb-4"><i class="fas fa-search"></i></p>
+              <h6 class="garden-title pl-3 pr-3 pb-4">WE PAY ATTENTION TO ALL SMALL DETAILS FOR BEST RESULTS.</h6>
+              <p class="garden-text pr-3 pl-3">Aeterno accusata theophrastus eum ei, sed ne ridens ancillae. Vim ne diam iusto, utinam atomorum abhorreant ei vel. Esse scripta ne his, homero essent inimicus pri et. Ad usu elitr euismod.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
+  <div class="wrapper-5">
+    <div class="row justify-content-center pb-5 pl-4 pr-4 pb-lg-4">
+      <div class="col-6 col-md-4 col-lg-2 pl-4 pr-4">
+        <img class="img-fluid" src="assets/logo.jpg" alt=""/>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 pl-4 pr-4">
+        <img class="img-fluid" src="assets/logo2.jpg" alt=""/>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 pl-4 pr-4">
+        <img class="img-fluid" src="assets/logo3.png" alt=""/>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 pl-4 pr-4">
+        <img class="img-fluid" src="assets/logo4.jpg" alt=""/>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 pl-4 pr-4">
+        <img class="img-fluid" src="assets/logo5.jpg" alt=""/>
+      </div>
+      <div class="col-6 col-md-4 col-lg-2 pl-4 pr-4">
+        <img class="img-fluid" src="assets/logo6.jpg" alt=""/>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 pb-3">
+        <h1 class="portfolio-title">LET'S MAKE SOMETHING GREAT TOGETHER</h1>
+      </div>
+      <div class="col-8">
+        <h6 class="portfolio-little-title">Get in touch with us and send some basic info for a quick quote.</h6>
+      </div>
+    </div>
+    <div class="yellow-btn">VIEW MORE</div>
+  </div>
+  
+  <footer>
+  
+    <div class="row justify-content-center contact-border pb-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <h6 class="footer-title pb-3">CONTACT INFO</h6>
+        <div class="row justify-content-center contact-border pb-3 pt-3">
+          <div class="col-3 p-0">
+            <p class="contact-little-title">Address:</p>
+          </div>
+          <div class="col-9">
+            <p class="contact-text">121 King Street, Melbourne Victoria 50000 Australia</p>
+          </div>
+        </div>
+        <div class="row justify-content-center contact-border pb-3 pt-3">
+          <div class="col-3 p-0">
+            <p class="contact-little-title">Phone:</p>
+          </div>
+          <div class="col-9">
+            <p class="contact-text">+1 (800) 456 37 96 - Office</p>
+          </div>
+        </div>
+        <div class="row justify-content-center contact-border pb-3 pt-3">
+          <div class="col-3 p-0">
+            <p class="contact-little-title">Email:</p>
+          </div>
+          <div class="col-9">
+            <p class="contact-text">email@info.com</p>
+          </div>
+        </div>
+        <div class="row justify-content-center pb-5 pt-3">
+          <div class="col-3 p-0">
+            <p class="contact-little-title">Follow Us:</p>
+          </div>
+          <div class="col-9">
+            <p class="contact-text"><i class="fab fa-facebook-square"></i> <i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i> <i class="fab fa-google-plus-square"></i> <i class="fab fa-google-play"></i></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <h6 class="footer-title pb-3">PHOTO STREAM</h6>
+        <div class="row justify-content-cent pb-3 pt-3">
+          <div class="col-4 pl-2 pr-2 pt-0 pb-0">
+            <img class="img-fluid" src="assets/img1.jpg" alt=""/>
+          </div>
+          <div class="col-4 pl-2 pr-2 pt-0 pb-0">
+            <img class="img-fluid" src="assets/img2.jpg" alt=""/>
+          </div>
+          <div class="col-4 pl-2 pr-2 pt-0 pb-0">
+            <img class="img-fluid" src="assets/img3.jpg" alt=""/>
+          </div>
+        </div>
+        <div class="row justify-content-center pb-5">
+          <div class="col-4 pl-2 pr-2 pt-0 pb-0">
+            <img class="img-fluid" src="assets/img4.jpg" alt=""/>
+          </div>
+          <div class="col-4 pl-2 pr-2 pt-0 pb-0">
+            <img class="img-fluid" src="assets/img5.jpg" alt=""/>
+          </div>
+          <div class="col-4 pl-2 pr-2 pt-0 pb-0">
+            <img class="img-fluid" src="assets/img6.jpg" alt=""/>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <h6 class="footer-title pb-3">RECENT POSTS</h6>
+        <div class="row justify-content-center contact-border pb-3 pt-3">
+          <div class="col-12 p-0 pb-2">
+            <p class="contact-little-title">New Architecture Project</p>
+          </div>
+          <div class="col-12 p-0">
+            <p class="contact-text">May 16, 2016 / glow / 0 comments</p>
+          </div>
+        </div>
+        <div class="row justify-content-center contact-border pb-3 pt-3">
+          <div class="col-12 p-0 pb-2">
+            <p class="contact-little-title">Shopping Center Concept</p>
+          </div>
+          <div class="col-12 p-0">
+            <p class="contact-text">May 16, 2016 / glow / 0 comments</p>
+          </div>
+        </div>
+        <div class="row justify-content-center pb-5 pt-3">
+          <div class="col-12 p-0 pb-2">
+            <p class="contact-little-title">Gino Carello Work</p>
+          </div>
+          <div class="col-12 p-0">
+            <p class="contact-text">May 46, 2016 / glow / 0 comments</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <h6 class="footer-title pb-3">NEWSLETTER SIGNUP</h6>
+        <div class="row justify-content-center pb-3 pt-3">
+          <div class="col-12 p-0 pb-2">
+            <p class="contact-little-title footer-line">Quo inciderint suscipiantur et, timeam omittam qui no. Honestatis complectitur vituperatoribus cum no, eos no modus alterum forensibus.</p>
+          </div>
+        </div>
+        <form method="post" action="">
+          <input class="email" name="email" placeholder="Your Email">
+        </form>
+        <div class="subscribe-btn">Subscribe</div>
+      </div>
+    </div>
+    
+    <div class="row justify-content-center pt-4 pb-4">
+      <div class="col-11">
+        <p class="contact-text" style="text-align: center;">Copyright &copy; Bricks. All rights reserved.</p>
+      </div>
+    </div>
+  
+  </footer>
   
   <script>
     window.onload = function() {
