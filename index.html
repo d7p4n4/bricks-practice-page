@@ -21,7 +21,7 @@
     <style>
       
       html {
-        font-size: 11.5px;
+        font-size: 13px;
         padding: 0;
         margin: 0;
         width: 100%;
@@ -29,7 +29,7 @@
       
       @media (min-width: 576px) {
         html {
-          font-size: 13px;
+          font-size: 15px;
         }
       }
       
@@ -92,13 +92,42 @@
         transform-origin: center center;
         transition: all .5s ease-in-out;
       }
+
+      .icons {
+        text-align: left;
+        font-size: 1rem;
+        border-right: none;
+      }
+      
+      .fa-facebook-square,
+      .fa-twitter,
+      .fa-instagram,
+      .fa-google-plus-square,
+      .fa-google-play {
+        padding-right: .25rem;
+        padding-top: 0;
+        transition: all .5s ease-in-out;
+        transform-origin: center center;
+      }
       
       @media (max-width: 768px) {
         .inform-phone,
-        .inform-email,
-        .icons,
-        .buy-line {
+        .inform-email {
           font-size: .85rem;
+          border-bottom: .1rem solid rgba(255,255,255,.3);
+        }
+        
+        .icons {
+          font-size: 1.3rem;
+        }
+        
+        .buy-line {
+          font-size: 1rem;
+        }
+        
+        .icons,
+        .inform-phone {
+          text-align: center;
         }
       }
       
@@ -120,6 +149,7 @@
         font-weight: bold;
         cursor: pointer;
         transform: scale(1.2);
+        border: none;
       }
       
       .inform-wrap:hover .inform-phone {
@@ -128,25 +158,6 @@
       
       .inform-email {
         text-align: center;
-      }
-      
-      .icons {
-        text-align: left;
-        font-size: 1rem;
-        padding-bottom: 0;
-        padding-top: 0.65rem;
-        border-right: none;
-      }
-      
-      .fa-facebook-square,
-      .fa-twitter,
-      .fa-instagram,
-      .fa-google-plus-square,
-      .fa-google-play {
-        padding-right: .25rem;
-        padding-top: 0;
-        transition: all .5s ease-in-out;
-        transform-origin: center center;
       }
 
       .fa-facebook-square:hover,
@@ -180,6 +191,7 @@
         text-align: center;
         font-family: gudea;
         font-size: .85rem;
+        font-weight: bold;
         color: whitesmoke;
         padding: .3rem;
         transition: all .5s ease-in-out;
@@ -312,6 +324,16 @@
         float: left;
       }
       
+      @media (max-width: 576px) {
+        .main-info-full-wrap {
+          top: 7.5%;
+        }
+        
+        .main-info-text-wrap {
+          width: 100vw;
+        }
+      }
+      
       .yellow-btn {
         text-align: center;
         position: relative;
@@ -383,6 +405,12 @@
         position: relative;
         top: 35%;
         z-index: 10;
+      }
+      
+      @media (max-width: 576px) {
+        .btn-row {
+          top: 25%;
+        }
       }
       
       /* wrapper-1 */
@@ -799,14 +827,14 @@
   <header>
   
     <div class="row inform-row">
-      <div class="col-4 col-md-2 p-0 inform-wrap">
+      <div class="col-6 col-md-4 col-lg-2 p-0 inform-wrap">
         <p class="inform-phone"><i class="fas fa-phone"></i> +1 (800) 416 37</p>
       </div>
-      <div class="col-4 col-md-2 p-0 inform-wrap">
+      <div class="col-6 col-md-4 col-lg-2 p-0 inform-wrap">
         <p class="inform-email"><i class="fas fa-envelope"></i> info@bricks.com</p>
       </div>
-      <div class="col-0 col-md-6 col-space"></div>
-      <div class="col-4 col-md-2 p-0 m-0 inform-wrap" style="border-left: .1rem solid rgba(255,255,255,.3);">
+      <div class="col-0 col-lg-6 col-space"></div>
+      <div class="col-12 col-md-4 col-lg-2 p-0 m-0 inform-wrap" style="border-left: .1rem solid rgba(255,255,255,.3);">
         <p class="icons"><i class="fab fa-facebook-square"></i> <i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i> <i class="fab fa-google-plus-square"></i> <i class="fab fa-google-play"></i></p>
       </div>
     </div>
@@ -817,13 +845,13 @@
       </div>
       <div class="col-8 col-md-4 my-auto buy-row pt-md-1">
         <div class="row justify-content-end pr-3">
-          <div class="col-5 col-lg-4 p-0">
+          <div class="col-7 col-lg-4 p-0">
             <p class="buy-line"><i class="fas fa-shopping-cart"></i> $0.00 (0 items)</p>
           </div>
           <div class="col-3 col-md-2 p-0">
             <p class="buy-line"><i class="fas fa-globe"></i> EUR</p>
           </div>
-          <div class="col-1 p-0">
+          <div class="col-2 p-0">
             <p class="buy-line"><i class="fas fa-search"></i></p>
           </div>
         </div>
@@ -929,13 +957,13 @@
           <div class="yellow-btn">VIEW MORE</div>
         </div>
         <div class="main-info-text-wrap">
-          <div class="row justify-content-center main-info-row">
-            <div class="col-10">
+          <div class="row justify-content-center main-info-row p-0 m-0">
+            <div class="col-11 p-0">
               <div class="row justify-content-center">
-                <div class="col-12 pb-4">
+                <div class="col-12 p-0 mb-0 pb-4">
                   <h1 class="main-title">CREATE SOMETHING NEW</h1>
                 </div>
-                <div class="col-10 col-md-6 ">
+                <div class="col-10 col-md-6">
                   <h3 class="main-text">Ne nec option percipitur disputando, ferri mazim mea cu, an wisi accusamus vis. In vero referrentur eos. At sit omnesque maiestatis, vim aperiri maluisset ad, harum facilisi et has. Ferri mazim mea cu, an wisi accusamus vis. In vero referrentur eos.</h3>
                 </div>
               </div>
@@ -944,10 +972,10 @@
           <div class="yellow-btn">VIEW MORE</div>
         </div>
         <div class="main-info-text-wrap">
-          <div class="row justify-content-center main-info-row">
-            <div class="col-10">
+          <div class="row justify-content-center main-info-row p-0 m-0">
+            <div class="col-11 p-0">
               <div class="row justify-content-center">
-                <div class="col-12 pb-4">
+                <div class="col-12 p-0 mb-0 pb-4">
                   <h1 class="main-title">MAKE YOUR FUTURE</h1>
                 </div>
                 <div class="col-10 col-md-6 ">
