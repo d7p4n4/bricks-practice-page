@@ -85,7 +85,7 @@
       .inform-email,
       .icons {
         color: whitesmoke;
-        font-size: .85rem;
+        font-size: .65rem;
         font-family: gudea;
         text-align: right;
         padding: .75rem 1rem;
@@ -265,7 +265,8 @@
         transform: scale(1.15);
       }
       
-      .buy-line {
+      .buy-line,
+      .buy-line .fa-shopping-cart {
         color: whitesmoke;
         text-align: center;
         font-size: .65rem;
@@ -828,6 +829,261 @@
           border-width: .1rem;
         }
       }
+      
+      /* sliding menu in mobile size */
+      
+      .mobile-menu,
+      .search {
+        display: none;
+      }
+      
+      .menu-btn {
+        text-align: center;
+        width: 100%;
+        height: 3.2rem;
+        background-color: rgba(255,255,255,.3);
+        position: absolute;
+        bottom: 0%;
+        margin: 0;
+        padding: .25rem 0;
+        transition: all .5s ease-in-out;
+      }
+      
+      .btn-menu-trigger {
+        width: 2.5rem;
+        height: 2.5rem;
+        position: relative;
+        top: 0;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .btn-menu-trigger span {
+        font-size: 0rem;
+        display: block;
+        user-select: none;
+        width: 100%;
+        height: .2rem;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 0;
+      }
+      
+      .btn-menu-trigger span::before {
+        content: '';
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: block;
+        left: 0;
+        transform: translateY(-250%);
+        transition: all .5s ease;
+      }
+      
+      .btn-menu-trigger span::after {
+        content: '';
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: block;
+        left: 0;
+        transform: translateY(250%);
+        transition: all .5s ease;
+      }
+      
+      .menu-wrapper {
+        width: 100%;
+        min-height: 100%;
+        height: auto;
+        position: absolute;
+        transform: translateY(-100%) translateY(3.2rem);
+        background-color: rgb(142,147,153);
+        z-index: 1000;
+        transition: all .5s ease-in-out;
+        padding-top: 2rem;
+        padding-bottom: 5rem;
+      }
+      
+      .bt-menu-open.menu-wrapper {
+        transform: translateY(0);
+      }
+      
+      .bt-menu-open .btn-menu-trigger span::before {
+        transform: translateY(0) rotate(45deg);
+      }
+      
+      .bt-menu-open .btn-menu-trigger span::after {
+        transform: translateY(0) rotate(-45deg);
+      }
+      
+      .bt-menu-open .btn-menu-trigger span {
+        background-color: transparent;
+      }
+      
+      .bt-menu-open .menu-btn {
+        background-color: rgb(42,47,53);
+      }
+      @media (min-width: 576px) {
+        .mobile-menu,
+        .search  {
+          display: block;
+        }
+        
+        .menu-wrapper {
+          display: none;
+        }
+      }
+      
+      .menu-li {
+        display: block;
+        width: 80%;
+        height: 3rem;
+        position: relative;
+        left: 10%;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family: gudea;
+        font-weight: 400;
+        color: rgb(42,47,53);
+        border-bottom: .1rem solid rgba(42,47,53,.3);
+        padding-top: .85rem;
+        margin-top: 1rem;
+        transition: all .3s ease-in-out;
+      }
+      
+      .menu-li svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .bottom-2, .left-right {
+        stroke: rgb(42,57,83);
+        fill: none;
+        position: relative;
+        stroke-width: .4rem;
+        bottom: 0;
+        padding: 0;
+        margin: 0;
+        transform: translateX(-100%);
+        transition: all .3s ease-in-out;
+      }
+      
+      .fa-home,
+      .menu-li .fa-shopping-cart,
+      .fa-credit-card,
+      .fa-comments,
+      .fa-compass,
+      .fa-bookmark,
+      .fa-file-alt {
+        color: rgb(42,57,83);
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      
+      .left-right {
+        transform: translateX(-1%);
+      }
+      
+      .menu-li:hover .bottom-2 {
+        transform: translateX(0);
+      }
+      
+      .menu-li:hover .left-right {
+        transform: translateX(100%);
+      }
+      
+      .menu-li:hover {
+        color: rgb(42,57,83);
+        font-weight: bold;
+        cursor: pointer;
+      }
+      
+      .menu-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        text-align: center;
+        position: absolute;
+        top: 30%;
+        left: calc(50% - .75rem);
+        display: inline-block;
+        transform: translate3d(0,0,0) scale(0);
+        opacity: 0;
+        transition: all .3s ease-in-out;
+      }
+      
+      .menu-li:hover .menu-icon {
+        opacity: 1;
+        transform: translate3d(-7.5rem,0,0) scale(1);
+      }
+      
+      .search-icon {
+        width: 3rem;
+        height: 3rem;
+        background-color: rgb(42,47,53);
+        border-radius: 0 .2rem .2rem 0;
+        position: absolute;
+        left: calc(90% - 3rem);
+        text-align: center;
+        bottom: 7rem;
+      }
+      
+      .search-icon .fa-search {
+        width: 2rem;
+        height: 2rem;
+        color: rgb(142,147,153);
+        position: relative;
+        top: calc(50% - 1rem);
+      }
+      
+      .search-form {
+        display: inline-block;
+        width: 0rem;
+        height: 3rem;
+        outline: none;
+        border: .15rem solid rgb(42,47,53);
+        border-radius: .2rem 0 0 .2rem;
+        position: absolute;
+        right: calc(10% + 3rem);
+        bottom: 7rem;
+        transition: all .3s ease-in-out;
+      }
+      
+      .search-input {
+        width: 100%;
+        height: 100%;
+        margin: 0;;
+        background-color: transparent;
+        font-family: gudea;
+        text-align: center;
+        font-size: 1.25rem;
+        color: rgb(42,47,53);
+        border: none;
+      }
+      
+      .search-input::placeholder {
+        font-size: 1.25rem;
+        font-family: gudea;
+        color: rgb(42,47,53);
+      }
+      
+      .search-open.search-form {
+        width: calc(80% - 3rem);
+      }
+      
+      .mobile-menu-row .icons {
+        position: absolute;
+        left: 0;
+        top: .25rem;
+      }
+      
     </style>
     
   </head>
@@ -835,36 +1091,103 @@
   <header>
   
     <div class="row inform-row">
-      <div class="col-6 col-md-4 col-lg-2 p-0 inform-wrap">
+      <div class="col-6 col-md-4 col-lg-2 p-0 inform-wrap mobile-menu">
         <p class="inform-phone"><i class="fas fa-phone"></i> +1 (800) 416 37</p>
       </div>
-      <div class="col-6 col-md-4 col-lg-2 p-0 inform-wrap">
+      <div class="col-6 col-md-4 col-lg-2 p-0 inform-wrap mobile-menu">
         <p class="inform-email"><i class="fas fa-envelope"></i> info@bricks.com</p>
       </div>
       <div class="col-0 col-lg-6 col-space"></div>
-      <div class="col-12 col-md-4 col-lg-2 p-0 m-0 inform-wrap" style="border-left: .1rem solid rgba(255,255,255,.3);">
+      
+      <div class="menu-wrapper">
+        <ul>
+          <li class="menu-li">Home
+            <div class="menu-icon"><i class="fas fa-home"></i></div>
+            <svg height="100%" width="100%">
+              <line class="bottom-2" x1="0" x2="100%" y1="100%" y2="100%"/>
+              <line class="left-right" x1="0" y1="0" y2="100%"/>
+            </svg>
+          </li>
+          <li class="menu-li">Pages
+            <div class="menu-icon"><i class="fas fa-bookmark"></i></div>
+            <svg height="100%" width="100%">
+              <line class="bottom-2" x1="0" x2="100%" y1="100%" y2="100%"/>
+              <line class="left-right" x1="0" y1="0" y2="100%"/>
+            </svg>
+          </li>
+          <li class="menu-li">Portfolio
+            <div class="menu-icon"><i class="fas fa-file-alt"></i></div>
+            <svg height="100%" width="100%">
+              <line class="bottom-2" x1="0" x2="100%" y1="100%" y2="100%"/>
+              <line class="left-right" x1="0" y1="0" y2="100%"/>
+            </svg>
+          </li>
+          <li class="menu-li">Journal
+            <div class="menu-icon"><i class="fas fa-compass"></i></div>
+            <svg height="100%" width="100%">
+              <line class="bottom-2" x1="0" x2="100%" y1="100%" y2="100%"/>
+              <line class="left-right" x1="0" y1="0" y2="100%"/>
+            </svg>
+          </li>
+          <li class="menu-li">Shop
+            <div class="menu-icon"><i class="fas fa-shopping-cart"></i></div>
+            <svg height="100%" width="100%">
+              <line class="bottom-2" x1="0" x2="100%" y1="100%" y2="100%"/>
+              <line class="left-right" x1="0" y1="0" y2="100%"/>
+            </svg>
+          </li>
+          <li class="menu-li">Contact
+            <div class="menu-icon"><i class="fas fa-comments"></i></div>
+            <svg height="100%" width="100%">
+              <line class="bottom-2" x1="0" x2="100%" y1="100%" y2="100%"/>
+              <line class="left-right" x1="0" y1="0" y2="100%"/>
+            </svg>
+          </li>
+          <li class="menu-li">Buy
+            <div class="menu-icon"><i class="fas fa-credit-card"></i></div>
+            <svg height="100%" width="100%">
+              <line class="bottom-2" x1="0" x2="100%" y1="100%" y2="100%"/>
+              <line class="left-right" x1="0" y1="0" y2="100%"/>
+            </svg>
+          </li>
+        </ul>
+        
+        <form class="search-form">
+          <input type="text" class="search-input" placeholder="Type Your Search">
+        </form>
+        <div class="search-icon"><i class="fas fa-search"></i></div>
+        
+        <div class="mobile-menu-row menu-btn">
+          <a href="#" class="btn-menu-trigger">
+            <span>Menu</span>
+          </a>
+          <p class="icons"><i class="fab fa-facebook-square"></i> <i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i> <i class="fab fa-google-plus-square"></i> <i class="fab fa-google-play"></i></p>
+        </div>
+      </div>
+      
+      <div class="col-12 col-md-4 col-lg-2 p-0 m-0 inform-wrap icon-row" style="border-left: .1rem solid rgba(255,255,255,.3);">
         <p class="icons"><i class="fab fa-facebook-square"></i> <i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i> <i class="fab fa-google-plus-square"></i> <i class="fab fa-google-play"></i></p>
       </div>
     </div>
     
     <div class="row m-3 mt-4">
-      <div class="col-4 col-md-4 col-lg-2 mb-2 mb-lg-0">
+      <div class="col-4 col-md-4 col-lg-2 mb-2 mb-lg-0 my-auto">
         <h3 class="name">BRICKS<span style="color: yellow">.</span></h3>
       </div>
       <div class="col-8 col-md-4 buy-row pt-md-1 my-auto">
         <div class="row justify-content-end pr-3">
-          <div class="col-7 col-lg-4 p-0">
+          <div class="col-7 col-sm-4 col-md-7 col-lg-4 p-0">
             <p class="buy-line"><i class="fas fa-shopping-cart"></i> $0.00 (0 items)</p>
           </div>
           <div class="col-3 col-md-2 p-0">
             <p class="buy-line"><i class="fas fa-globe"></i> EUR</p>
           </div>
-          <div class="col-2 p-0">
-            <p class="buy-line"><i class="fas fa-search"></i></p>
+          <div class="col-1 p-0">
+            <p class="buy-line search"><i class="fas fa-search"></i></p>
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-12 col-lg-6 mt-2 mt-lg-0 p-0 nav-row">
+      <div class="col-12 col-md-12 col-lg-6 mt-2 mt-lg-0 p-0 nav-row mobile-menu">
         <div class="row justify-content-center">
           <div class="col-3 col-sm-2 p-0 align-self-center svg-wrap">
             <p class="nav-text">HOME</p>
@@ -1315,6 +1638,24 @@
         } else {
           $(".main-info-long-wrap").css({"margin-left": "0"});
           $(".btn-left").css({"color": "rgba(255,255,255,.5)"});
+        }
+      })
+      
+      var mobileMenu = $('.menu-wrapper');
+      
+      $('.btn-menu-trigger').on('click', function() {
+        if (mobileMenu.hasClass('bt-menu-open')) {
+          mobileMenu.removeClass('bt-menu-open');
+        } else {
+          mobileMenu.addClass('bt-menu-open');
+        }
+      })
+      
+      $('.search-icon').on('click', function() {
+        if($('.search-form').hasClass('search-open')) {
+          $('.search-form').removeClass('search-open');
+        } else {
+          $('.search-form').addClass('search-open');
         }
       })
       
