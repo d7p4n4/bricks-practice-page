@@ -357,14 +357,6 @@
         margin-left: 0px;
       }
       
-      @media (min-width: 768px) {
-        .buy-row {
-          position: absolute;
-          right: 0;
-          left: inherit;
-        }
-      }
-      
       .btn-left,
       .btn-right {
         background-color: transparent;
@@ -415,12 +407,6 @@
         font-size: 1.2rem;
       }
       
-      @media (min-width: 576px) {
-        .portfolio-little-text {
-          font-size: 1rem;
-        }
-      }
-      
       .portfolio-title {
         text-align: center;
         font-family: roboto;
@@ -434,13 +420,6 @@
         color: rgba(0,0,0,.5);
         text-align: center;
         line-height: 1.2rem;
-      }
-      
-      @media (min-width: 768px) {
-        .portfolio-text {
-          font-size: 1rem;
-          line-height: 1.4rem;
-        }
       }
       
       .line {
@@ -500,7 +479,7 @@
       
       .garden-text {
         color: whitesmoke;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-family: karma;
         font-style: italic;
         text-align: center;
@@ -655,6 +634,7 @@
         border-radius: 99999px;
         margin-top: 1rem;
         padding-top: .5rem;
+        margin-bottom: 1rem;
         font-weight: bold;
         transition: all .5s ease-in-out;
       }
@@ -669,6 +649,10 @@
       /* media queries */
 
       @media (min-width: 576px) {
+        .portfolio-little-text {
+          font-size: 1rem;
+        }
+
         .portfolio-img-text {
           font-size: 1rem;
         }
@@ -676,7 +660,7 @@
         .wrapper-2 .icons,
         .wrapper-4 .icons,
         .garden-title {
-          font-size: 1.75rem;
+          font-size: 1.5rem;
         }
         
         .garden-text {
@@ -685,8 +669,8 @@
         }
         
         .wrapper-2 .garden-text {
-          font-size: 1.25rem;
-          line-height: 1.4rem;
+          font-size: 1rem;
+          line-height: 1.2rem;
         }
 
         .garden-border,
@@ -718,18 +702,29 @@
       }
 
       @media (min-width: 768px) {
+        .buy-row {
+          position: absolute;
+          right: 0;
+          left: inherit;
+        }
+
+        .portfolio-text {
+          font-size: 1rem;
+          line-height: 1.4rem;
+        }
+
         .wrapper-2 .icons,
         .wrapper-4 .icons {
           font-size: 1.25;
         }
         
         .garden-title {
-          font-size: 1rem;
+          font-size: 1.25rem;
         }
         
         .wrapper-2 .garden-text {
-          font-size: .85rem;
-          line-height: 1rem;
+          font-size: 1rem;
+          line-height: 1.2rem;
         }
         
         .wrapper-4 .garden-text {
@@ -763,12 +758,12 @@
       @media (min-width: 992px) {
         .wrapper-4 .garden-text {
           font-size: 1rem;
-          line-height: 1.3rem;
+          line-height: 1.2rem;
         }
         
         .wrapper-4 .garden-title {
           font-size: 1.2rem;
-          line-height: 1.4rem;
+          line-height: 1.3rem;
         }
         
         .wrapper-4 .icons {
